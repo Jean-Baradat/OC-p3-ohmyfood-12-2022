@@ -1,0 +1,11 @@
+{
+  "name": "baradat_jean_codesource_122022",
+  "version": "1.0.0",
+  "description": "Projet 3 - Dynamisez une page web avec des animations CSS",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/style.scss:./assets/css/style.css",
+    "sass-compressed": "sass --watch ./assets/sass/style.scss:./assets/css/style.min.css --style compressed"
+  },
+  "author": "Jean Baradat",
+  "license": "ISC"
+}
