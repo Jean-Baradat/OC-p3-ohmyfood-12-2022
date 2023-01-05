@@ -1,4 +1,4 @@
-My Sass Architecture Structure
+# My Sass Architecture Structure
 
 sass/
 |
@@ -48,3 +48,13 @@ sass/
 |
 |
 `– style.scss            # Primary Sass file
+
+
+# Import Order
+1. utils
+2. vendors
+3. base
+4. components
+5. layout
+6. pages
+7. themes
