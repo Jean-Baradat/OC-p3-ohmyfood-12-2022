@@ -1,5 +1,6 @@
 # My Sass Architecture Structure
 
+```
 sass/
 |
 |– base/
@@ -48,9 +49,9 @@ sass/
 |
 |
 `– style.scss            # Primary Sass file
+```
 
-
-# Import Order
+# Import order in style.scss
 1. utils
 2. vendors
 3. base
