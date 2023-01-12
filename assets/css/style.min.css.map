@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "AAAA;;;;;;;;;;;;EAYE,ACZF,kBAES,CACL,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU",
-"sources": ["../sass/style.scss","../sass/base/_base.scss"],
+"mappings": "AAAA,kBAES,CACL,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,UAAU,CAAE,UAAU",
+"sources": ["../sass/base/_base.scss"],
 "names": [],
 "file": "style.min.css"
 }
