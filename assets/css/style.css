@@ -60,10 +60,15 @@ a {
   .main-footer__nav li:first-child {
     margin-top: 0; }
   .main-footer__nav .have-icon {
-    display: flex;
+    display: inline-flex;
     align-items: center; }
+  .main-footer__nav a:hover span {
+    text-decoration: underline; }
   .main-footer__nav .footer-link-icon {
-    margin-right: .6rem; }
+    margin-right: .6rem;
+    transition: transform 0.5s; }
+  .main-footer__nav .have-icon:hover .footer-link-icon {
+    transform: scale(1.2); }
   .main-footer__nav .footer-link-icon.is-first {
     margin-right: 1rem; }
 

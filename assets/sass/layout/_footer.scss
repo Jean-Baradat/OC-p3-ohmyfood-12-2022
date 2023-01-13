@@ -22,12 +22,21 @@
         }
 
         .have-icon {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+        }
+
+        a:hover span {
+            text-decoration: underline;
         }
 
         .footer-link-icon {
             margin-right: .6rem;
+            transition: transform 0.5s;
+        }
+
+        .have-icon:hover .footer-link-icon {
+            transform: scale(1.2);
         }
 
         .footer-link-icon.is-first {
