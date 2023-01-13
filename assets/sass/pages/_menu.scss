@@ -1,3 +1,25 @@
-.is-font-shrikhand {
-    font-family: $titleFont, cursive;
+@each $name,
+$url in $bgImgMenu {
+    .img-#{$name} {
+        background-image: url(#{$url});
+    }
+}
+
+.menu {
+    padding-top: 55vw;
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    .is-font-shrikhand {
+        font-family: $titleFont, cursive;
+        font-weight: normal;
+    }
+
+    &__main-section {
+        background-color: #fff;
+        border-radius: 3rem 3rem 0 0;
+        padding: 1rem;
+    }
+
 }
