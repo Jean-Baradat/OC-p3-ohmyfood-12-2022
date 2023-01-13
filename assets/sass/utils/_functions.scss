@@ -1,4 +1,4 @@
 @function parameter($mainFont, $titleFont, $wght) {
-    $result: 'family='+$mainFont+':wght@'+$wght+'&family='+$titleFont+'&display=swap';
+    $result: 'family=#{$mainFont}:wght@#{$wght}&family=#{$titleFont}&display=swap';
     @return $result;
 }
