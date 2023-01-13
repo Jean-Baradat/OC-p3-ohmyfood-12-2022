@@ -46,6 +46,27 @@ a {
     display: block;
     margin: 0 auto; }
 
+.main-footer {
+  background-color: #353535;
+  padding: 1.5rem;
+  color: #fff; }
+  .main-footer__logo {
+    width: 6rem;
+    margin-bottom: 1rem; }
+  .main-footer__nav ul {
+    list-style: none; }
+  .main-footer__nav li {
+    margin: .8rem 0; }
+  .main-footer__nav li:first-child {
+    margin-top: 0; }
+  .main-footer__nav .have-icon {
+    display: flex;
+    align-items: center; }
+  .main-footer__nav .footer-link-icon {
+    margin-right: .6rem; }
+  .main-footer__nav .footer-link-icon.is-first {
+    margin-right: 1rem; }
+
 .home .heading-home .location-info {
   background-color: #eaeaea;
   display: flex;

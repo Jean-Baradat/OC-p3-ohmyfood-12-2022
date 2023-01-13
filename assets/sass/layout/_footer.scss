@@ -1,0 +1,37 @@
+.main-footer {
+    background-color: #353535;
+    padding: 1.5rem;
+    color: #fff;
+
+    &__logo {
+        width: 6rem;
+        margin-bottom: 1rem;
+    }
+
+    &__nav {
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin: .8rem 0;
+        }
+
+        li:first-child {
+            margin-top: 0;
+        }
+
+        .have-icon {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-link-icon {
+            margin-right: .6rem;
+        }
+
+        .footer-link-icon.is-first {
+            margin-right: 1rem;
+        }
+    }
+}
