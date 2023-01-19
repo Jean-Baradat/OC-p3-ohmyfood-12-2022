@@ -148,7 +148,60 @@ a {
   .home .aside-operation .step__text {
     font-weight: bold;
     font-size: 1.1rem; }
+.home .section-restaurants {
+  background-color: #f7f7f7;
+  padding: 3rem 1.5rem;
+  display: grid;
+  gap: 1rem; }
+  .home .section-restaurants__title {
+    margin-bottom: 2rem; }
+  .home .section-restaurants .article-restaurant {
+    background-color: #fff;
+    box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    position: relative; }
+  .home .section-restaurants .img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    object-fit: cover;
+    display: block; }
+  .home .section-restaurants .restaurant-is-new {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.4rem 0.7rem;
+    color: #008766;
+    border-radius: 3px;
+    background-color: #99E2D0; }
+  .home .section-restaurants .content {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center; }
 
+@media screen and (max-width: 768px) {
+  .section-restaurants {
+    grid-template: auto 1fr 1fr 1fr 1fr / 1fr; }
+    .section-restaurants .img {
+      height: 40vw; } }
+@media screen and (min-width: 1025px) {
+  .section-restaurants {
+    grid-template: auto 1fr / 1fr 1fr 1fr 1fr; }
+    .section-restaurants .article-restaurant {
+      grid-row-start: 2; }
+    .section-restaurants .img {
+      height: 10rem; } }
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .section-restaurants {
+    grid-template: auto 1fr 1fr / 1fr 1fr; }
+    .section-restaurants .article-restaurant:nth-child(2),
+    .section-restaurants .article-restaurant:nth-child(3) {
+      grid-row-start: 2; }
+    .section-restaurants .article-restaurant:nth-child(4),
+    .section-restaurants .article-restaurant:nth-child(5) {
+      grid-row-start: 3; }
+    .section-restaurants .img {
+      height: 15rem; } }
 .img-la-palette-du-gout {
   background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); }
 

@@ -49,7 +49,7 @@
             margin-left: 0.8rem;
             background-color: #f7f7f7;
             border-radius: 1rem;
-            box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+            @include global-box-shadow;
             position: relative;
             display: flex;
             align-items: center;
@@ -87,6 +87,93 @@
         .step__text {
             font-weight: bold;
             font-size: 1.1rem;
+        }
+    }
+
+    .section-restaurants {
+        background-color: #f7f7f7;
+        padding: 3rem 1.5rem;
+        display: grid;
+        gap: 1rem;
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+
+        .article-restaurant {
+            background-color: #fff;
+            @include global-box-shadow;
+            border-radius: 1rem;
+            position: relative;
+        }
+
+        .img {
+            width: 100%;
+            border-radius: 1rem 1rem 0 0;
+            object-fit: cover;
+            display: block;
+        }
+
+        .restaurant-is-new {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            padding: 0.4rem 0.7rem;
+            color: #008766;
+            border-radius: 3px;
+            background-color: $middle-blue-green;
+        }
+
+        .content {
+            display: flex;
+            padding: 1rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .section-restaurants {
+        grid-template: auto 1fr 1fr 1fr 1fr / 1fr;
+
+        .img {
+            height: 40vw;
+        }
+    }
+}
+
+@media screen and (min-width:1025px) {
+    .section-restaurants {
+        grid-template: auto 1fr / 1fr 1fr 1fr 1fr;
+
+        .article-restaurant {
+            grid-row-start: 2;
+        }
+
+        .img {
+            height: 10rem;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width:1024px) {
+    .section-restaurants {
+        grid-template: auto 1fr 1fr / 1fr 1fr;
+
+        .article-restaurant:nth-child(2),
+        .article-restaurant:nth-child(3) {
+            grid-row-start: 2;
+        }
+
+        .article-restaurant:nth-child(4),
+        .article-restaurant:nth-child(5) {
+            grid-row-start: 3;
+        }
+
+        .img {
+            height: 15rem;
         }
     }
 }
