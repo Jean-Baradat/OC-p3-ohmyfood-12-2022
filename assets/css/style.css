@@ -85,32 +85,33 @@ a {
   .main-footer__nav .footer-link-icon.is-first {
     margin-right: 1rem; }
 
-.home .heading-home .location-info {
+.heading-home .location-info {
   background-color: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 3rem; }
-  .home .heading-home .location-info__icon {
+  .heading-home .location-info__icon {
     padding-right: 1rem; }
-  .home .heading-home .location-info__text {
+  .heading-home .location-info__text {
     font-weight: bold; }
-.home .heading-home .zone-about {
+.heading-home .zone-about {
   background-color: #f7f7f7;
   text-align: center;
   padding: 3rem 1rem; }
-  .home .heading-home .zone-about__title {
+  .heading-home .zone-about__title {
     margin-bottom: 1rem; }
-  .home .heading-home .zone-about__subtitle {
+  .heading-home .zone-about__subtitle {
     margin-bottom: 2rem;
     font-size: 1.1rem; }
-  .home .heading-home .zone-about__calltoaction {
+  .heading-home .zone-about__calltoaction {
     display: inline-block;
     background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
     padding: 1rem 1.4rem;
     border-radius: 5rem;
     color: #fff;
     text-align: center; }
+
 .home .aside-operation {
   padding: 3rem 1.5rem; }
   .home .aside-operation__title {
@@ -153,6 +154,15 @@ a {
   padding: 3rem 1.5rem;
   display: grid;
   gap: 1rem; }
+  @media screen and (max-width: 768px) {
+    .home .section-restaurants {
+      grid-template: auto 1fr 1fr 1fr 1fr / 1fr; } }
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .home .section-restaurants {
+      grid-template: auto 1fr 1fr / 1fr 1fr; } }
+  @media screen and (min-width: 1025px) {
+    .home .section-restaurants {
+      grid-template: auto 1fr / 1fr 1fr 1fr 1fr; } }
   .home .section-restaurants__title {
     margin-bottom: 2rem; }
   .home .section-restaurants .article-restaurant {
@@ -160,11 +170,28 @@ a {
     box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
     position: relative; }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .home .section-restaurants .article-restaurant:nth-child(2), .home .section-restaurants .article-restaurant:nth-child(3) {
+        grid-row-start: 2; }
+      .home .section-restaurants .article-restaurant:nth-child(4), .home .section-restaurants .article-restaurant:nth-child(5) {
+        grid-row-start: 3; } }
+    @media screen and (min-width: 1025px) {
+      .home .section-restaurants .article-restaurant {
+        grid-row-start: 2; } }
   .home .section-restaurants .img {
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     object-fit: cover;
     display: block; }
+    @media screen and (max-width: 768px) {
+      .home .section-restaurants .img {
+        height: 40vw; } }
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+      .home .section-restaurants .img {
+        height: 13rem; } }
+    @media screen and (min-width: 1025px) {
+      .home .section-restaurants .img {
+        height: 10rem; } }
   .home .section-restaurants .restaurant-is-new {
     position: absolute;
     top: 1rem;
@@ -179,29 +206,6 @@ a {
     justify-content: space-between;
     align-items: center; }
 
-@media screen and (max-width: 768px) {
-  .section-restaurants {
-    grid-template: auto 1fr 1fr 1fr 1fr / 1fr; }
-    .section-restaurants .img {
-      height: 40vw; } }
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .section-restaurants {
-    grid-template: auto 1fr 1fr / 1fr 1fr; }
-    .section-restaurants .article-restaurant:nth-child(2),
-    .section-restaurants .article-restaurant:nth-child(3) {
-      grid-row-start: 2; }
-    .section-restaurants .article-restaurant:nth-child(4),
-    .section-restaurants .article-restaurant:nth-child(5) {
-      grid-row-start: 3; }
-    .section-restaurants .img {
-      height: 15rem; } }
-@media screen and (min-width: 1025px) {
-  .section-restaurants {
-    grid-template: auto 1fr / 1fr 1fr 1fr 1fr; }
-    .section-restaurants .article-restaurant {
-      grid-row-start: 2; }
-    .section-restaurants .img {
-      height: 10rem; } }
 .img-la-palette-du-gout {
   background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); }
 

@@ -1,41 +1,41 @@
-.home {
-    .heading-home {
-        .location-info {
-            background-color: #eaeaea;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 3rem;
+.heading-home {
+    .location-info {
+        background-color: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
 
-            &__icon {
-                padding-right: 1rem;
-            }
-
-            &__text {
-                font-weight: bold;
-            }
+        &__icon {
+            padding-right: 1rem;
         }
 
-        .zone-about {
-            background-color: #f7f7f7;
-            text-align: center;
-            padding: 3rem 1rem;
-
-            &__title {
-                margin-bottom: 1rem;
-            }
-
-            &__subtitle {
-                margin-bottom: 2rem;
-                font-size: 1.1rem;
-            }
-
-            &__calltoaction {
-                @include is-btn-calltoaction;
-            }
+        &__text {
+            font-weight: bold;
         }
     }
 
+    .zone-about {
+        background-color: #f7f7f7;
+        text-align: center;
+        padding: 3rem 1rem;
+
+        &__title {
+            margin-bottom: 1rem;
+        }
+
+        &__subtitle {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        &__calltoaction {
+            @include is-btn-calltoaction;
+        }
+    }
+}
+
+.home {
     .aside-operation {
         padding: 3rem 1.5rem;
 
@@ -96,6 +96,18 @@
         display: grid;
         gap: 1rem;
 
+        @include media-max(768px) {
+            grid-template: auto 1fr 1fr 1fr 1fr / 1fr;
+        }
+
+        @include media-min-max(769px, 1024px) {
+            grid-template: auto 1fr 1fr / 1fr 1fr;
+        }
+
+        @include media-min(1025px) {
+            grid-template: auto 1fr / 1fr 1fr 1fr 1fr;
+        }
+
         &__title {
             margin-bottom: 2rem;
         }
@@ -105,6 +117,23 @@
             @include global-box-shadow;
             border-radius: 1rem;
             position: relative;
+
+            @include media-min-max(769px, 1024px) {
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    grid-row-start: 2;
+                }
+
+                &:nth-child(4),
+                &:nth-child(5) {
+                    grid-row-start: 3;
+                }
+            }
+
+            @include media-min(1025px) {
+                grid-row-start: 2;
+            }
         }
 
         .img {
@@ -112,6 +141,18 @@
             border-radius: 1rem 1rem 0 0;
             object-fit: cover;
             display: block;
+
+            @include media-max(768px) {
+                height: 40vw;
+            }
+
+            @include media-min-max(769px, 1024px) {
+                height: 13rem;
+            }
+
+            @include media-min(1025px) {
+                height: 10rem;
+            }
         }
 
         .restaurant-is-new {
@@ -129,51 +170,6 @@
             padding: 1rem;
             justify-content: space-between;
             align-items: center;
-        }
-    }
-}
-
-
-@media screen and (max-width: 768px) {
-    .section-restaurants {
-        grid-template: auto 1fr 1fr 1fr 1fr / 1fr;
-
-        .img {
-            height: 40vw;
-        }
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width:1024px) {
-    .section-restaurants {
-        grid-template: auto 1fr 1fr / 1fr 1fr;
-
-        .article-restaurant:nth-child(2),
-        .article-restaurant:nth-child(3) {
-            grid-row-start: 2;
-        }
-
-        .article-restaurant:nth-child(4),
-        .article-restaurant:nth-child(5) {
-            grid-row-start: 3;
-        }
-
-        .img {
-            height: 15rem;
-        }
-    }
-}
-
-@media screen and (min-width:1025px) {
-    .section-restaurants {
-        grid-template: auto 1fr / 1fr 1fr 1fr 1fr;
-
-        .article-restaurant {
-            grid-row-start: 2;
-        }
-
-        .img {
-            height: 10rem;
         }
     }
 }
