@@ -17,9 +17,22 @@ $url in $bgImgMenu {
     }
 
     &__main-section {
-        background-color: #fff;
+        background-color: #f7f7f7;
         border-radius: 3rem 3rem 0 0;
         padding: 1rem;
     }
 
+}
+
+@media screen and (min-width: 900px) {
+    .menu {
+        padding-top: 20rem;
+        background-size: 100% auto;
+        background-position: center -15rem;
+
+
+        &__main-section {
+            border-radius: 0;
+        }
+    }
 }

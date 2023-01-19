@@ -19,8 +19,16 @@ body {
 
 h1,
 h2 {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: bold; }
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold; }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto; }
 
 a {
   color: inherit;
@@ -29,6 +37,11 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-focus-ring-color: rgba(0, 0, 0, 0); }
 
+@media screen and (min-width: 1200px) {
+  main {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 3rem auto;
+    border-radius: 1rem; } }
 .main-header {
   background-color: #fff;
   padding: 1rem 0;
@@ -98,6 +111,43 @@ a {
     border-radius: 5rem;
     color: #fff;
     text-align: center; }
+.home .aside-operation {
+  padding: 3rem 1.5rem; }
+  .home .aside-operation__title {
+    margin-bottom: 2rem; }
+  .home .aside-operation__step {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0.8rem;
+    background-color: #f7f7f7;
+    border-radius: 1rem;
+    box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s; }
+    .home .aside-operation__step:hover {
+      background-color: #f5edff; }
+      .home .aside-operation__step:hover .step__icon {
+        color: #9356DC; }
+  .home .aside-operation .step__num {
+    position: absolute;
+    left: -13px;
+    background-color: #9356DC;
+    color: #fff;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .home .aside-operation .step__icon {
+    margin-left: 1rem;
+    margin-right: 1.5rem;
+    color: #7e7e7e; }
+  .home .aside-operation .step__text {
+    font-weight: bold;
+    font-size: 1.1rem; }
 
 .img-la-palette-du-gout {
   background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); }
@@ -120,8 +170,16 @@ a {
     font-family: "Shrikhand", cursive;
     font-weight: normal; }
   .menu__main-section {
-    background-color: #fff;
+    background-color: #f7f7f7;
     border-radius: 3rem 3rem 0 0;
     padding: 1rem; }
+
+@media screen and (min-width: 900px) {
+  .menu {
+    padding-top: 20rem;
+    background-size: 100% auto;
+    background-position: center -15rem; }
+    .menu__main-section {
+      border-radius: 0; } }
 
 /*# sourceMappingURL=style.css.map */
