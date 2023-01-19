@@ -184,13 +184,6 @@ a {
     grid-template: auto 1fr 1fr 1fr 1fr / 1fr; }
     .section-restaurants .img {
       height: 40vw; } }
-@media screen and (min-width: 1025px) {
-  .section-restaurants {
-    grid-template: auto 1fr / 1fr 1fr 1fr 1fr; }
-    .section-restaurants .article-restaurant {
-      grid-row-start: 2; }
-    .section-restaurants .img {
-      height: 10rem; } }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .section-restaurants {
     grid-template: auto 1fr 1fr / 1fr 1fr; }
@@ -202,6 +195,13 @@ a {
       grid-row-start: 3; }
     .section-restaurants .img {
       height: 15rem; } }
+@media screen and (min-width: 1025px) {
+  .section-restaurants {
+    grid-template: auto 1fr / 1fr 1fr 1fr 1fr; }
+    .section-restaurants .article-restaurant {
+      grid-row-start: 2; }
+    .section-restaurants .img {
+      height: 10rem; } }
 .img-la-palette-du-gout {
   background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); }
 
