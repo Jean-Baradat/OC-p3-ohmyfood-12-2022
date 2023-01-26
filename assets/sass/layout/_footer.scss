@@ -3,6 +3,11 @@
     padding: 1.5rem;
     color: #fff;
 
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
     &__logo {
         width: 6rem;
         margin-bottom: 1rem;
