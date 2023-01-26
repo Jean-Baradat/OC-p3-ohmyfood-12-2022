@@ -63,16 +63,32 @@ a {
   background-color: #353535;
   padding: 1.5rem;
   color: #fff; }
+  @media screen and (min-width: 769px) {
+    .main-footer {
+      padding: 3rem 1.5rem; } }
   .main-footer .container {
     max-width: 1440px;
     margin: 0 auto; }
-  .main-footer__logo {
-    width: 6rem;
-    margin-bottom: 1rem; }
+  .main-footer .logo-link {
+    margin-bottom: 1rem;
+    display: block; }
+    @media screen and (min-width: 769px) {
+      .main-footer .logo-link {
+        text-align: center; } }
+    .main-footer .logo-link__img {
+      width: 6rem; }
   .main-footer__nav ul {
-    list-style: none; }
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+    @media screen and (min-width: 769px) {
+      .main-footer__nav ul {
+        flex-direction: row;
+        justify-content: center; }
+        .main-footer__nav ul li {
+          margin: 0 1rem; } }
   .main-footer__nav li {
-    margin: .8rem 0; }
+    margin-bottom: .8rem; }
   .main-footer__nav li:first-child {
     margin-top: 0; }
   .main-footer__nav .have-icon {
