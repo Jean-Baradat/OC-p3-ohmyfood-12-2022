@@ -5,6 +5,12 @@
     border-radius: 5rem;
     color: #fff;
     text-align: center;
+    transition: all 0.2s linear;
+
+    &:hover {
+        @include global-box-shadow;
+        filter: brightness(110%);
+    }
 }
 
 @mixin global-box-shadow {

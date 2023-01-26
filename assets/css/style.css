@@ -129,7 +129,11 @@ a {
     padding: 1rem 1.4rem;
     border-radius: 5rem;
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    transition: all 0.2s linear; }
+    .heading-home .zone-about__calltoaction:hover {
+      box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+      filter: brightness(110%); }
 
 .home .aside-operation {
   padding: 3rem 1.5rem;
@@ -253,16 +257,16 @@ a {
     align-items: center; }
 
 .img-la-palette-du-gout {
-  background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg); }
+  background-image: url(./../img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.webp); }
 
 .img-la-note-enchantee {
-  background-image: url(./../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg); }
+  background-image: url(./../img/restaurants/stil-u2Lp8tXIcjw-unsplash.webp); }
 
 .img-a-la-francaise {
-  background-image: url(./../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg); }
+  background-image: url(./../img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.webp); }
 
 .img-le-delice-des-sens {
-  background-image: url(./../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg); }
+  background-image: url(./../img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.webp); }
 
 .menu {
   padding-top: 55vw;
@@ -306,7 +310,11 @@ a {
       padding: 1rem 3rem;
       border-radius: 5rem;
       color: #fff;
-      text-align: center; }
+      text-align: center;
+      transition: all 0.2s linear; }
+      .menu__main-section .btn-menu-order:hover {
+        box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+        filter: brightness(110%); }
   .menu .part {
     margin-bottom: 2rem;
     display: grid;
