@@ -30,7 +30,7 @@
         }
 
         &__calltoaction {
-            @include is-btn-calltoaction;
+            @include is-btn-calltoaction(1.4rem);
         }
     }
 }

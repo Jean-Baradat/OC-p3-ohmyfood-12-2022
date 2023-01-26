@@ -1,7 +1,7 @@
-@mixin is-btn-calltoaction {
+@mixin is-btn-calltoaction($px) {
     display: inline-block;
     background: linear-gradient(170deg, $rose-pink 0%, $amethyst 100%);
-    padding: 1rem 1.4rem;
+    padding: 1rem $px;
     border-radius: 5rem;
     color: #fff;
     text-align: center;

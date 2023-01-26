@@ -27,8 +27,13 @@ h3 {
   font-weight: bold; }
 
 main {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: 0 auto; }
+  @media screen and (min-width: 1440px) {
+    main {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 3rem auto;
+      border-radius: 1rem; } }
 
 a {
   color: inherit;
@@ -37,11 +42,11 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-focus-ring-color: rgba(0, 0, 0, 0); }
 
-@media screen and (min-width: 1200px) {
-  main {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 3rem auto;
-    border-radius: 1rem; } }
+/* GENERAL CLASS */
+.full-width-center {
+  width: 100%;
+  text-align: center; }
+
 .main-header {
   background-color: #fff;
   padding: 1rem 0;
@@ -230,13 +235,60 @@ a {
       background-position: center -15rem; } }
   .menu .is-font-shrikhand {
     font-family: "Shrikhand", cursive;
-    font-weight: normal; }
+    font-weight: normal;
+    font-size: 1.7rem; }
   .menu__main-section {
     background-color: #f7f7f7;
     border-radius: 3rem 3rem 0 0;
-    padding: 1rem; }
+    padding: 2rem 1rem; }
     @media screen and (min-width: 900px) {
       .menu__main-section {
         border-radius: 0; } }
+    .menu__main-section .heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem; }
+    .menu__main-section .heading__icon {
+      margin-right: 2rem; }
+    .menu__main-section .btn-menu-order {
+      display: inline-block;
+      background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+      padding: 1rem 3rem;
+      border-radius: 5rem;
+      color: #fff;
+      text-align: center; }
+  .menu .part {
+    margin-bottom: 2rem; }
+    .menu .part__title {
+      font-weight: normal;
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      position: relative;
+      margin-bottom: 1rem; }
+      .menu .part__title::after {
+        content: "";
+        width: 2.8rem;
+        height: 3px;
+        background-color: #99E2D0;
+        position: absolute;
+        bottom: -5px;
+        left: 0; }
+    .menu .part__article {
+      background-color: #fff;
+      box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
+      margin: 1rem 0;
+      padding: 0.7rem 0.8rem;
+      border-radius: 1rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between; }
+    .menu .part .article-heading h3 {
+      margin-bottom: 5px; }
+    .menu .part .article-heading p {
+      font-size: 0.95rem; }
+    .menu .part__price {
+      margin-right: 1rem;
+      font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */
