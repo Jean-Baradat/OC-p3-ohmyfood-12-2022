@@ -39,14 +39,27 @@
     .aside-operation {
         padding: 3rem 1.5rem;
         @include global-max-screen-width;
+        display: grid;
+        gap: 1.5rem;
+
+        @include media-max(768px) {
+            grid-template: auto 1fr 1fr 1fr / 1fr;
+        }
+
+        @include media-min-max(769px, 1024px) {
+            grid-template: auto 1fr 1fr / 1fr 1fr;
+        }
+
+        @include media-min(1025px) {
+            grid-template: auto 1fr / 1fr 1fr 1fr;
+        }
 
         &__title {
-            margin-bottom: 2rem;
+            margin-bottom: 0.5rem;
         }
 
         &__step {
             padding: 2rem 1.5rem;
-            margin-bottom: 1.5rem;
             margin-left: 0.8rem;
             background-color: #f7f7f7;
             border-radius: 1rem;
@@ -61,7 +74,23 @@
 
                 .step__icon {
                     color: $amethyst;
+                }
+            }
 
+            @include media-min(1025px) {
+                grid-row-start: 2;
+            }
+
+            @include media-min-max(769px, 1024px) {
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    grid-row-start: 2;
+                }
+
+                &:nth-child(4) {
+                    grid-row-start: 3;
+                    grid-column: 1 / 3;
                 }
             }
         }
