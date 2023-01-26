@@ -11,6 +11,11 @@
     box-shadow: 0 7px 12px 3px rgba(0, 0, 0, 0.1);
 }
 
+@mixin global-max-screen-width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
 @mixin media-min($min-width) {
     @media screen and (min-width: $min-width) {
         & {

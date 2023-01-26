@@ -10,8 +10,7 @@ $url in $bgImgMenu {
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
-    max-width: 1440px;
-    margin: 0 auto;
+    @include global-max-screen-width;
 
     @include media-min(900px) {
         padding-top: 20rem;
