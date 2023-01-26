@@ -352,7 +352,8 @@ a {
       border-radius: 1rem;
       display: flex;
       align-items: flex-end;
-      justify-content: space-between; }
+      justify-content: space-between;
+      overflow: hidden; }
       @media screen and (min-width: 1025px) {
         .menu .part__article {
           grid-row-start: 2;
@@ -362,10 +363,18 @@ a {
           grid-row-start: 2; }
         .menu .part__article:nth-child(4), .menu .part__article:nth-child(5) {
           grid-row-start: 3; } }
-    .menu .part .article-heading h3 {
-      margin-bottom: 5px; }
-    .menu .part .article-heading p {
-      font-size: 0.95rem; }
+    .menu .part .article-heading {
+      overflow: hidden; }
+      .menu .part .article-heading h3 {
+        margin-bottom: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .menu .part .article-heading p {
+        font-size: 0.95rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
     .menu .part__price {
       margin-right: 1rem;
       font-weight: bold; }

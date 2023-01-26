@@ -107,6 +107,7 @@ $url in $bgImgMenu {
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
+            overflow: hidden;
 
             @include media-min(1025px) {
                 grid-row-start: 2;
@@ -128,12 +129,21 @@ $url in $bgImgMenu {
         }
 
         .article-heading {
+            overflow: hidden;
+
             h3 {
                 margin-bottom: 5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
             }
 
             p {
                 font-size: 0.95rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+
             }
         }
 
