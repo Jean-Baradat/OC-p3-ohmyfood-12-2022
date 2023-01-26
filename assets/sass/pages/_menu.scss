@@ -10,11 +10,20 @@ $url in $bgImgMenu {
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @include media-min(900px) {
         padding-top: 20rem;
         background-size: 100% auto;
         background-position: center -15rem;
+    }
+
+    @include media-min(1440px) {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin: 3rem auto;
+        border-radius: 1rem;
+        background-position: center -20rem;
     }
 
     .is-font-shrikhand {

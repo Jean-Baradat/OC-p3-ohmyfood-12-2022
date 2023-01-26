@@ -38,6 +38,8 @@
 .home {
     .aside-operation {
         padding: 3rem 1.5rem;
+        max-width: 1440px;
+        margin: 0 auto;
 
         &__title {
             margin-bottom: 2rem;
@@ -95,6 +97,8 @@
         padding: 3rem 1.5rem;
         display: grid;
         gap: 1rem;
+        max-width: 1440px;
+        margin: 0 auto;
 
         @include media-max(768px) {
             grid-template: auto 1fr 1fr 1fr 1fr / 1fr;
@@ -106,6 +110,11 @@
 
         @include media-min(1025px) {
             grid-template: auto 1fr / 1fr 1fr 1fr 1fr;
+        }
+
+        @include media-min(1440px) {
+            margin-bottom: 3rem;
+            border-radius: 0.5rem;
         }
 
         &__title {

@@ -26,15 +26,6 @@ h3 {
   font-size: 1.2rem;
   font-weight: bold; }
 
-main {
-  max-width: 1440px;
-  margin: 0 auto; }
-  @media screen and (min-width: 1440px) {
-    main {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin: 3rem auto;
-      border-radius: 1rem; } }
-
 a {
   color: inherit;
   text-decoration: inherit;
@@ -118,7 +109,9 @@ a {
     text-align: center; }
 
 .home .aside-operation {
-  padding: 3rem 1.5rem; }
+  padding: 3rem 1.5rem;
+  max-width: 1440px;
+  margin: 0 auto; }
   .home .aside-operation__title {
     margin-bottom: 2rem; }
   .home .aside-operation__step {
@@ -158,7 +151,9 @@ a {
   background-color: #f7f7f7;
   padding: 3rem 1.5rem;
   display: grid;
-  gap: 1rem; }
+  gap: 1rem;
+  max-width: 1440px;
+  margin: 0 auto; }
   @media screen and (max-width: 768px) {
     .home .section-restaurants {
       grid-template: auto 1fr 1fr 1fr 1fr / 1fr; } }
@@ -168,6 +163,10 @@ a {
   @media screen and (min-width: 1025px) {
     .home .section-restaurants {
       grid-template: auto 1fr / 1fr 1fr 1fr 1fr; } }
+  @media screen and (min-width: 1440px) {
+    .home .section-restaurants {
+      margin-bottom: 3rem;
+      border-radius: 0.5rem; } }
   .home .section-restaurants__title {
     margin-bottom: 2rem; }
   .home .section-restaurants .article-restaurant {
@@ -227,12 +226,20 @@ a {
   padding-top: 55vw;
   background-size: contain;
   background-position: top;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  max-width: 1440px;
+  margin: 0 auto; }
   @media screen and (min-width: 900px) {
     .menu {
       padding-top: 20rem;
       background-size: 100% auto;
       background-position: center -15rem; } }
+  @media screen and (min-width: 1440px) {
+    .menu {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin: 3rem auto;
+      border-radius: 1rem;
+      background-position: center -20rem; } }
   .menu .is-font-shrikhand {
     font-family: "Shrikhand", cursive;
     font-weight: normal;
