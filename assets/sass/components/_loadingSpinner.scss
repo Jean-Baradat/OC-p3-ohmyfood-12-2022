@@ -1,0 +1,93 @@
+$animation-duration: 2s;
+
+.loading-spinner {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 2;
+    animation: $animation-duration linear spinner-bg;
+    visibility: hidden;
+
+    @include keyframes(spinner-bg) {
+        0% {
+            background-color: #fff;
+            visibility: visible;
+        }
+
+        80% {
+            background-color: #fff;
+        }
+
+        100% {
+            background-color: rgba(255, 255, 255, 0);
+            visibility: inherit;
+        }
+    }
+
+    &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-radius: 50rem;
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: $animation-duration linear spinner;
+
+        @include keyframes(spinner) {
+            0% {
+                background-color: $amethyst;
+            }
+
+            75% {
+                background-color: $rose-pink;
+                width: 20rem;
+                height: 20rem;
+                opacity: 0.9;
+            }
+
+            100% {
+                background-color: rgba(0, 0, 0, 0);
+                width: 200rem;
+                height: 200rem;
+                opacity: 0;
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-radius: 50rem;
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: $animation-duration linear spinner1;
+
+        @include keyframes(spinner1) {
+            0% {
+                background-color: $amethyst;
+                opacity: 0.5;
+            }
+
+            75% {
+                background-color: $rose-pink;
+                width: 30rem;
+                height: 30rem;
+                opacity: 0.1;
+            }
+
+            100% {
+                background-color: rgba(0, 0, 0, 0);
+                width: 200rem;
+                height: 200rem;
+                opacity: 0;
+            }
+        }
+    }
+}
