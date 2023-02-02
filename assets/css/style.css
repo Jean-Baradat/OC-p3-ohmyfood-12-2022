@@ -103,6 +103,32 @@ a {
     width: 200rem;
     height: 200rem;
     opacity: 0; } }
+.btn-like {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  display: flex; }
+  .btn-like:hover .initial {
+    opacity: 0; }
+  .btn-like:hover .on-hover {
+    opacity: 1; }
+  .btn-like .initial {
+    transition: opacity 0.3s;
+    line-height: normal !important; }
+  .btn-like .on-hover {
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: linear-gradient(170deg, #FF79DA 0%, #9356DC 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: normal !important;
+    position: absolute;
+    top: 0;
+    left: 0; }
+
 .main-header {
   background-color: #fff;
   padding: 1rem 0;

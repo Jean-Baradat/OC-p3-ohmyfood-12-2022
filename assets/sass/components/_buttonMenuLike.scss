@@ -1,0 +1,36 @@
+.btn-like {
+    position: relative;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    display: flex;
+
+    &:hover {
+        .initial {
+            opacity: 0;
+        }
+
+        .on-hover {
+            opacity: 1;
+        }
+    }
+
+    .initial {
+        transition: opacity 0.3s;
+        line-height: normal !important;
+    }
+
+    .on-hover {
+        opacity: 0;
+        transition: opacity 0.3s;
+        background: linear-gradient(170deg, $rose-pink 0%, $amethyst 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: normal !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
