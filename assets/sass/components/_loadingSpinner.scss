@@ -1,4 +1,4 @@
-$animation-duration: 2s;
+$animation-duration: 3s;
 
 .loading-spinner {
     width: 100vw;
@@ -24,7 +24,7 @@ $animation-duration: 2s;
         }
     }
 
-    &::after {
+    &::before {
         content: "";
         width: 0;
         height: 0;
@@ -34,11 +34,12 @@ $animation-duration: 2s;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: $animation-duration linear spinner;
+        animation: $animation-duration linear spinner-circle;
 
-        @include keyframes(spinner) {
+        @include keyframes(spinner-circle) {
             0% {
                 background-color: $amethyst;
+                box-shadow: 0 0 0 5px $rose-pink-a3;
             }
 
             75% {
@@ -53,11 +54,12 @@ $animation-duration: 2s;
                 width: 200rem;
                 height: 200rem;
                 opacity: 0;
+                box-shadow: 0 0 0 5rem $rose-pink-a3;
             }
         }
     }
 
-    &::before {
+    &::after {
         content: "";
         width: 0;
         height: 0;
@@ -67,25 +69,29 @@ $animation-duration: 2s;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        animation: $animation-duration linear spinner1;
+        animation: $animation-duration linear spinner;
+        border-top-color: rgb(0, 0, 0);
 
-        @include keyframes(spinner1) {
+        @include keyframes(spinner) {
             0% {
-                background-color: $amethyst;
-                opacity: 0.5;
+                transform: translate(-50%, -50%) rotate(0deg);
+                border: 3px solid transparent;
+                opacity: 1;
             }
 
             75% {
-                background-color: $rose-pink;
-                width: 30rem;
-                height: 30rem;
-                opacity: 0.1;
+                transform: translate(-50%, -50%) rotate(1500deg);
+                width: 20rem;
+                height: 20rem;
+                border: 3rem solid transparent;
+                border-top-color: rgba(0, 0, 0, 1);
+            }
+
+            76% {
+                opacity: 0;
             }
 
             100% {
-                background-color: rgba(0, 0, 0, 0);
-                width: 200rem;
-                height: 200rem;
                 opacity: 0;
             }
         }
