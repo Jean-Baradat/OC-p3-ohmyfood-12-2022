@@ -448,7 +448,23 @@ a {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative;
+      transition: padding-right 0.5s; }
+      .menu .part__article:hover .article-selected-indicator {
+        width: 4rem; }
+      .menu .part__article:hover .article-selected-indicator .icon {
+        animation: 0.35s linear test;
+        margin-left: 0; }
+      .menu .part__article:hover .article-price {
+        margin-right: 0; }
+      .menu .part__article:hover {
+        padding-right: 5rem; }
+@keyframes test {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg); } }
       @media screen and (min-width: 1025px) {
         .menu .part__article {
           grid-row-start: 2;
@@ -470,12 +486,28 @@ a {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap; }
-    .menu .part__price {
+    .menu .part .article-price {
       margin-right: 1rem;
-      font-weight: bold; }
+      font-weight: bold;
+      transition: margin-right 0.5s; }
       @media screen and (min-width: 1025px) {
-        .menu .part__price {
+        .menu .part .article-price {
           margin-left: 1rem;
           margin-right: 0; } }
+    .menu .part .article-selected-indicator {
+      background-color: #99E2D0;
+      height: 100%;
+      width: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: width 0.5s; }
+      .menu .part .article-selected-indicator .icon {
+        color: #ffffff;
+        margin-left: 4rem;
+        transition: margin-left 0.5s; }
 
 /*# sourceMappingURL=style.css.map */

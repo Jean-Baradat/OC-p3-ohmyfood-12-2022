@@ -108,6 +108,36 @@ $url in $bgImgMenu {
             align-items: flex-end;
             justify-content: space-between;
             overflow: hidden;
+            position: relative;
+            transition: padding-right 0.5s;
+
+            &:hover .article-selected-indicator {
+                width: 4rem;
+            }
+
+            &:hover .article-selected-indicator .icon {
+                animation: 0.35s linear test;
+                margin-left: 0;
+
+            }
+
+            &:hover .article-price {
+                margin-right: 0;
+            }
+
+            &:hover {
+                padding-right: 5rem;
+            }
+
+            @include keyframes(test) {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(359deg);
+                }
+            }
 
             @include media-min(1025px) {
                 grid-row-start: 2;
@@ -147,13 +177,33 @@ $url in $bgImgMenu {
             }
         }
 
-        &__price {
+        .article-price {
             margin-right: 1rem;
             font-weight: bold;
+            transition: margin-right 0.5s;
 
             @include media-min(1025px) {
                 margin-left: 1rem;
                 margin-right: 0;
+            }
+        }
+
+        .article-selected-indicator {
+            background-color: $middle-blue-green;
+            height: 100%;
+            width: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: width 0.5s;
+
+            .icon {
+                color: #ffffff;
+                margin-left: 4rem;
+                transition: margin-left 0.5s;
             }
         }
     }
