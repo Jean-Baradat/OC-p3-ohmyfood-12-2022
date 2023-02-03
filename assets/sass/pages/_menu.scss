@@ -116,7 +116,7 @@ $url in $bgImgMenu {
             }
 
             &:hover .article-selected-indicator .icon {
-                animation: 0.35s linear test;
+                animation: 0.35s linear indicator-icon-rotate;
                 margin-left: 0;
 
             }
@@ -129,7 +129,7 @@ $url in $bgImgMenu {
                 padding-right: 5rem;
             }
 
-            @include keyframes(test) {
+            @include keyframes(indicator-icon-rotate) {
                 0% {
                     transform: rotate(0deg);
                 }

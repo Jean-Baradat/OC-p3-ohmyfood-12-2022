@@ -454,13 +454,13 @@ a {
       .menu .part__article:hover .article-selected-indicator {
         width: 4rem; }
       .menu .part__article:hover .article-selected-indicator .icon {
-        animation: 0.35s linear test;
+        animation: 0.35s linear indicator-icon-rotate;
         margin-left: 0; }
       .menu .part__article:hover .article-price {
         margin-right: 0; }
       .menu .part__article:hover {
         padding-right: 5rem; }
-@keyframes test {
+@keyframes indicator-icon-rotate {
   0% {
     transform: rotate(0deg); }
   100% {
