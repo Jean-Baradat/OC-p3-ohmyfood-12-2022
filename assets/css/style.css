@@ -450,7 +450,8 @@ a {
       justify-content: space-between;
       overflow: hidden;
       position: relative;
-      transition: padding-right 0.5s; }
+      transition: padding-right 0.5s;
+      opacity: 0; }
       .menu .part__article:hover .article-selected-indicator {
         width: 4rem; }
       .menu .part__article:hover .article-selected-indicator .icon {
@@ -509,5 +510,18 @@ a {
         color: #ffffff;
         margin-left: 4rem;
         transition: margin-left 0.5s; }
+    .menu .part:nth-child(2) .part__article {
+      animation: anim-part-menu 0.5s ease-in-out 0.15s forwards; }
+    .menu .part:nth-child(3) .part__article {
+      animation: anim-part-menu 0.5s ease-in-out 0.45s forwards; }
+    .menu .part:nth-child(4) .part__article {
+      animation: anim-part-menu 0.5s ease-in-out 0.75s forwards; }
+@keyframes anim-part-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(0.8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=style.css.map */

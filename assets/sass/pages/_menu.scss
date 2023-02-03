@@ -110,6 +110,7 @@ $url in $bgImgMenu {
             overflow: hidden;
             position: relative;
             transition: padding-right 0.5s;
+            opacity: 0;
 
             &:hover .article-selected-indicator {
                 width: 4rem;
@@ -204,6 +205,28 @@ $url in $bgImgMenu {
                 color: #ffffff;
                 margin-left: 4rem;
                 transition: margin-left 0.5s;
+            }
+        }
+
+        @for $i from 2 to 5 {
+            &:nth-child(#{$i}) {
+                $delay: ($i - 1.5) * 0.3;
+
+                .part__article {
+                    animation: anim-part-menu 0.5s ease-in-out #{$delay}s forwards;
+                }
+            }
+        }
+
+        @include keyframes(anim-part-menu) {
+            0% {
+                opacity: 0;
+                transform: translateY(0.8rem);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     }
